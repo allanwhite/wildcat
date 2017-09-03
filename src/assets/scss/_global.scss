@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+// @import 'motion-ui';
+
+.full-width {
+    width: 100%;
+}
+.group {// generic container; add .group to a div to give it extra bottom menu-margin
+    $gap: 1.5rem;
+    margin-bottom: $gap !important;
+    @include breakpoint(medium up) {
+        margin-bottom: $gap * 1.5 !important;
+    }
+    &--sm {
+        margin-bottom: $gap * 0.6 !important;
+        @include breakpoint(medium up) {
+            margin-bottom: $gap * 0.75 !important;
+        }
+    }
+}
